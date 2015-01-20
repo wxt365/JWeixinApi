@@ -69,14 +69,14 @@
      * wxData.type		享类型,music、video或link，不填默认为link
      * wxData.dataUrl	如果type是music或video，则要提供数据链接，默认为空
      * 
-     * wxCallbacks:相关回调方法
-     * wxCallbacks.success		分享成功的回调函数
-     * wxCallbacks.cancel		取消分享的回调函数
-     * wxCallbacks.fail			失败时执行的回调函数
-     * wxCallbacks.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
-     * wxCallbacks.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
+     * wxCallback:相关回调方法
+     * wxCallback.success		分享成功的回调函数
+     * wxCallback.cancel		取消分享的回调函数
+     * wxCallback.fail			失败时执行的回调函数
+     * wxCallback.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
+     * wxCallback.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
      */
-    WeixinApi.shareToFriend=function(wxData, wxCallbacks){
+    WeixinApi.shareToFriend=function(wxData, wxCallback){
     	if(null == _wx){
     		alert("微信接口对象不能为null");
     		return;
@@ -98,15 +98,15 @@
 		    },
 		    fail:function(){
 		    	//接口调用失败时执行的回调函数
-		    	wxCallbacks.fail();
+		    	wxCallback.fail();
 		    },
 		    complete:function(){
 		    	// 接口调用完成时执行的回调函数，无论成功或失败都会执行。
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    },
 		    trigger:function(){
 		    	//监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    }
 		});
     	
@@ -122,14 +122,14 @@
      * wxData.type		享类型,music、video或link，不填默认为link
      * wxData.dataUrl	如果type是music或video，则要提供数据链接，默认为空
      * 
-     * wxCallbacks:相关回调方法
-     * wxCallbacks.success		分享成功的回调函数
-     * wxCallbacks.cancel		取消分享的回调函数
-     * wxCallbacks.fail			失败时执行的回调函数
-     * wxCallbacks.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
-     * wxCallbacks.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
+     * wxCallback:相关回调方法
+     * wxCallback.success		分享成功的回调函数
+     * wxCallback.cancel		取消分享的回调函数
+     * wxCallback.fail			失败时执行的回调函数
+     * wxCallback.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
+     * wxCallback.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
      */
-    WeixinApi.shareToTimeline=function(wxData, wxCallbacks){
+    WeixinApi.shareToTimeline=function(wxData, wxCallback){
     	if(null == _wx){
     		alert("微信接口对象不能为null");
     		return;
@@ -149,15 +149,15 @@
 		    },
 		    fail:function(){
 		    	//接口调用失败时执行的回调函数
-		    	wxCallbacks.fail();
+		    	wxCallback.fail();
 		    },
 		    complete:function(){
 		    	// 接口调用完成时执行的回调函数，无论成功或失败都会执行。
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    },
 		    trigger:function(){
 		    	//监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    }
 		});
     };
@@ -172,14 +172,14 @@
      * wxData.type		享类型,music、video或link，不填默认为link
      * wxData.dataUrl	如果type是music或video，则要提供数据链接，默认为空
      * 
-     * wxCallbacks:相关回调方法
-     * wxCallbacks.success		分享成功的回调函数
-     * wxCallbacks.cancel		取消分享的回调函数
-     * wxCallbacks.fail			失败时执行的回调函数
-     * wxCallbacks.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
-     * wxCallbacks.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
+     * wxCallback:相关回调方法
+     * wxCallback.success		分享成功的回调函数
+     * wxCallback.cancel		取消分享的回调函数
+     * wxCallback.fail			失败时执行的回调函数
+     * wxCallback.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
+     * wxCallback.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
      */
-    WeixinApi.shareToWeibo=function(wxData, wxCallbacks){
+    WeixinApi.shareToWeibo=function(wxData, wxCallback){
     	if(null == _wx){
     		alert("微信接口对象不能为null");
     		return;
@@ -200,15 +200,15 @@
 		    },
 		    fail:function(){
 		    	//接口调用失败时执行的回调函数
-		    	wxCallbacks.fail();
+		    	wxCallback.fail();
 		    },
 		    complete:function(){
 		    	// 接口调用完成时执行的回调函数，无论成功或失败都会执行。
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    },
 		    trigger:function(){
 		    	//监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    }
 		});
     };
@@ -223,14 +223,14 @@
      * wxData.type		享类型,music、video或link，不填默认为link
      * wxData.dataUrl	如果type是music或video，则要提供数据链接，默认为空
      * 
-     * wxCallbacks:相关回调方法
-     * wxCallbacks.success		分享成功的回调函数
-     * wxCallbacks.cancel		取消分享的回调函数
-     * wxCallbacks.fail			失败时执行的回调函数
-     * wxCallbacks.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
-     * wxCallbacks.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
+     * wxCallback:相关回调方法
+     * wxCallback.success		分享成功的回调函数
+     * wxCallback.cancel		取消分享的回调函数
+     * wxCallback.fail			失败时执行的回调函数
+     * wxCallback.complete		调用完成时执行的回调函数，无论成功或失败都会执行。
+     * wxCallback.trigger		监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
      */
-    WeixinApi.shareToQQ=function(wxData, wxCallbacks){
+    WeixinApi.shareToQQ=function(wxData, wxCallback){
     	if(null == _wx){
     		alert("微信接口对象不能为null");
     		return;
@@ -251,15 +251,15 @@
 		    },
 		    fail:function(){
 		    	//接口调用失败时执行的回调函数
-		    	wxCallbacks.fail();
+		    	wxCallback.fail();
 		    },
 		    complete:function(){
 		    	// 接口调用完成时执行的回调函数，无论成功或失败都会执行。
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    },
 		    trigger:function(){
 		    	//监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。 
-		    	wxCallbacks.complete();
+		    	wxCallback.complete();
 		    }
 		});
     };
